@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Global Styles for the "Warm, Vintage, Optimistic" Feel */
+body {
+    background-color: #FFF7ED;
+    /* Light Cream for a cleaner look */
+    color: #1F2937;
+    /* Gray-800 for better contrast */
+    font-family: 'Outfit', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #3F9AAE;
+    font-family: 'Poppins', sans-serif;
+    /* Teal Blue for headers */
+}
+
+/* Enhancements */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(63, 154, 174, 0.1), 0 4px 6px -2px rgba(63, 154, 174, 0.05);
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFE2AF;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #79C9C5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3F9AAE;
+}
