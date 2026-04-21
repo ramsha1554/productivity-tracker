@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import bcrypt from 'bcrypt'; // We will need to install bcryptjs
+import bcrypt from 'bcrypt'; 
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -20,7 +20,6 @@ const userSchema = new mongoose.Schema({
     }
 });
 
-// Pre-save hook to hash password
 userSchema.pre('save', async function (next) {
     if (!this.isModified('password')) return next();
 
@@ -33,7 +32,7 @@ userSchema.pre('save', async function (next) {
     }
 });
 
-// Method to compare passwords
+
 userSchema.methods.comparePassword = async function (candidatePassword) {
     return await bcrypt.compare(candidatePassword, this.password);
 };

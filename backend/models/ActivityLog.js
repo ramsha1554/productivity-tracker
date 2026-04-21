@@ -33,8 +33,7 @@ const activityLogSchema = new mongoose.Schema({
     },
     productivityScore: {
         type: Number,
-        // This can be a calculated field: e.g., duration * focusLevel / 60
-        // But helpful to store for quick aggregation
+     
     },
     date: {
         type: Date,
@@ -45,11 +44,10 @@ const activityLogSchema = new mongoose.Schema({
 // Pre-save hook to calculate score
 activityLogSchema.pre('save', function (next) {
     if (this.durationMinutes && this.focusLevel) {
-        // Example score calculation: (duration in hours) * focusLevel * 10
-        // 60 mins task with focus 5 = 1 * 5 * 10 = 50 points
+    
         this.productivityScore = (this.durationMinutes / 60) * this.focusLevel * 10;
     }
-    next();
+    next()
 });
 
 const ActivityLog = mongoose.model('ActivityLog', activityLogSchema);
