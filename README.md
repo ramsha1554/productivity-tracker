@@ -11,7 +11,7 @@ A premium, full-stack productivity monitoring application designed to help users
 - **📊 Dynamic Analytics**: Interactive charts powered by Recharts to visualize productivity trends over time.
 - **⚡ Real-time Updates**: Instant feedback and seamless navigation using Framer Motion animations.
 - **🎨 Glassmorphic UI**: High-end modern design using Tailwind CSS with glassmorphism and subtle micro-animations.
-- **☁️ Cloud Persistence**: Data stored securely in MongoDB with a robust Express backend.
+- **☁️ Cloud Persistence**: Data stored securely in MongoDB with a robust Express backend . and
 
 ## 🛠️ Tech Stack
 
